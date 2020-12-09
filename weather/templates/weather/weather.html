@@ -57,8 +57,11 @@
                                     <p>
                                         <span class="title">{{ city_weather.city }}</span>
                                         <br>
-                                        <span class="subtitle">{{ city_weather.temperature }}° C</span>
-                                        <br> {{ city_weather.description }}
+                                        <span class="level">
+                                            <span class="level-left subtitle">{{ city_weather.temperature }}° C</span>
+                                            <span class="level-right"><a href="{% url 'weather:delete' pk=city.id %}" class="delete is-large level-item"></a></span>
+                                        </span>
+                                        {{ city_weather.description }}
                                     </p>
                                 </div>
                             </div>
